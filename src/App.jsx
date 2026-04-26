@@ -396,7 +396,7 @@ export default function App() {
     <div style={{maxWidth:720,margin:"0 auto",padding:"2rem 1.5rem",fontFamily:"-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"}}>
       <div style={{marginBottom:"2rem"}}>
         <h1 style={{fontSize:26,fontWeight:500,marginBottom:6,letterSpacing:"-0.02em"}}>ML Attack Visualizer</h1>
-        <p style={{fontSize:14,color:"var(--color-text-tertiary)",lineHeight:1.6}}>Interactive notes on four AI security projects, taught from the ground up with visuals and quizzes.</p>
+        <p style={{fontSize:14,color:"var(--color-text-tertiary)",lineHeight:1.6}}>Interactive notes on my four AI security projects.</p>
       </div>
       <div style={{display:"flex",gap:6,flexWrap:"wrap",marginBottom:"2rem",borderBottom:"0.5px solid var(--color-border-tertiary)",paddingBottom:"1rem"}}>
         {sections.map((s,i) => (
