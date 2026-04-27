@@ -1,4 +1,5 @@
 import Quiz from "./Quiz"
+const NativeMath = window.Math
 
 function FunctionViz() {
   return (
