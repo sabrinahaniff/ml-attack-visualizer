@@ -4,6 +4,8 @@ Recently, I've been exploring AI security independently and I kept running into 
 
 And so, I built this to make it visual and interactive mainly for my self learning.
 
+![alt text](image.png)
+
 Covers my four projects so far:
 - Adversarial image attacks (FGSM)
 - Federated learning poisoning
