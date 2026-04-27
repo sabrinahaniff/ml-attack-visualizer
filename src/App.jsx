@@ -20,7 +20,7 @@ const TAG_COLORS = {
   "Attack + Defense": { bg: "#fef7e0", color: "#b06000" },
 }
 
-const VIEWS = { math: <Math />, fgsm: <FGSM />, fed: <FedLearning />, llm: <LLMRedTeam />, mia: <MIA /> }
+const VIEWS = { math: <MathFoundations />, fgsm: <FGSM />, fed: <FedLearning />, llm: <LLMRedTeam />, mia: <MIA /> }
 
 export default function App() {
   const [active, setActive] = useState("math")
