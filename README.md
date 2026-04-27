@@ -12,6 +12,18 @@ Covers my four projects so far:
 - LLM red teaming
 - Membership inference attacks
 
+## Adversarial Image Attacks
+![alt text](image-2.png)
+
+## Federated Learning Poisoning
+![alt text](image-3.png)
+
+## LLM Red Teaming
+![alt text](image-4.png)
+
+## Membership Inference Attacks
+![alt text](image-1.png)
+
 ## Setup
 
 ```bash
