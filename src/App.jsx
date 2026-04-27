@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Math from "./components/Math"
+import MathFoundations from "./components/MathFoundations"
 import FGSM from "./components/FGSM"
 import FedLearning from "./components/FedLearning"
 import LLMRedTeam from "./components/LLMRedTeam"
