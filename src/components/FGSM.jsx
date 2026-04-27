@@ -82,7 +82,7 @@ export default function FGSM() {
         Epsilon controls how large each pixel nudge is. At epsilon=0.01 the changes are invisible to humans. At epsilon=0.1 you might start to notice slight color shifts. The attack is most impressive at small epsilon values where the image looks completely unchanged but the model is thoroughly confused.
       </p>
 
-      <h3>Why coordination is the key insight</h3>
+      <h3>Why coordination is the key</h3>
       <p>
         One pixel nudged by 0.01 does nothing. The model does not care. But 150,000 pixels all nudged by 0.01 in the mathematically optimal direction simultaneously breaks the model completely. This is not random noise. Random noise cancels out because different pixels push in different random directions. FGSM does not cancel out. Every single pixel is pushing loss upward at the same time. That coordination is what makes the attack so effective at such small perturbation sizes.
       </p>
@@ -127,6 +127,29 @@ export default function FGSM() {
         </p>
       </div>
 
+       <Quiz
+        question="Why is FGSM not the same as adding random noise to an image?"
+        options={[
+          "FGSM changes more pixels than random noise does.",
+          "Random noise cancels out because pixels push in random directions. FGSM uses the gradient to push every pixel in the specific direction that increases loss the most, so nothing cancels out.",
+          "Random noise uses a larger epsilon value.",
+          "FGSM only changes pixels on the edges of the image."
+        ]}
+        correct={1}
+        explanation="The gradient gives you the mathematically optimal direction for every single pixel simultaneously. Random noise has no such structure — the nudges cancel each other out. Coordination is what makes FGSM so effective at tiny epsilon values."
+      />
+
+      <Quiz
+        question="What does setting image.requires_grad = True do in PyTorch?"
+        options={[
+          "It makes the image larger for better processing.",
+          "It tells PyTorch to track gradients for the image pixels, so loss.backward() can compute how changing each pixel affects the loss.",
+          "It freezes the model weights so they cannot change.",
+          "It converts the image to a format PyTorch can read."
+        ]}
+        correct={1}
+        explanation="Normally PyTorch only tracks gradients for model weights. Setting requires_grad = True on the image tensor tells PyTorch to also compute gradients for those pixels during backpropagation. Without this, image.grad would be None after loss.backward()."
+      />
      
     </div>
   )
